@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- *******************************************************************
+This is Joel "Jaykul" Bennett's coloring format file for PowerShell 5.1
+******************************************************************** -->
+<Configuration>
+  <SelectionSets>
+    <SelectionSet>
+      <Name>Text</Name>
+      <Types>
+        <TypeName>PoshCode.Pansies.Text</TypeName>
+        <TypeName>Microsoft.PowerShell.Console.Text</TypeName>
+      </Types>
+    </SelectionSet>
+    <SelectionSet>
+      <Name>RgbColor</Name>
+      <Types>
+        <TypeName>PoshCode.Pansies.RgbColor</TypeName>
+        <TypeName>Microsoft.PowerShell.Console.RgbColor</TypeName>
+      </Types>
+    </SelectionSet>
+  </SelectionSets>
+  <ViewDefinitions>
+    <View>
+      <Name>Text</Name>
+      <ViewSelectedBy>
+        <SelectionSetName>Text</SelectionSetName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Width>35</Width>
+            <Label>BackgroundColor</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Width>35</Width>
+            <Label>ForegroundColor</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Object</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ToString</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <ScriptBlock>
+                  $_.BackgroundColor.ToVtEscapeSequence($true) + " $([char]27)[0m " + $_.BackgroundColor.ToString()
+                </ScriptBlock>
+              </TableColumnItem>
+              <TableColumnItem>
+                <ScriptBlock>
+                  $_.ForegroundColor.ToVtEscapeSequence($true) + " $([char]27)[0m " + $_.ForegroundColor.ToString()
+                </ScriptBlock>
+              </TableColumnItem>
+              <TableColumnItem>
+                <ScriptBlock>
+                  [System.Management.Automation.LanguagePrimitives]::ConvertTo($_.Object, [string]) + "$([char]27)[0m"
+                </ScriptBlock>
+              </TableColumnItem>
+              <TableColumnItem>
+                <ScriptBlock>
+                  $_.ToString() + "$([char]27)[0m"
+                </ScriptBlock>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>RgbColor</Name>
+      <ViewSelectedBy>
+        <SelectionSetName>RgbColor</SelectionSetName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Width>16</Width>
+            <Label>Mode</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Width>9</Width>
+            <Alignment>Left</Alignment>
+            <Label>RGB (hex)</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Width>12</Width>
+            <Alignment>Left</Alignment>
+            <Label>ConsoleColor</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Width>11</Width>
+            <Alignment>Left</Alignment>
+            <Label>XTerm Index</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Alignment>Left</Alignment>
+            <Label>RGB (decimal)</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <ScriptBlock>
+                  $_.ToVtEscapeSequence($true) + " $([char]27)[0m " + $_.Mode
+                </ScriptBlock>
+              </TableColumnItem>
+              <TableColumnItem>
+                <ScriptBlock>
+                  "#{0:X6}" -f $_.RGB
+                </ScriptBlock>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ConsoleColor</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>XTerm256Index</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Ordinals</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>

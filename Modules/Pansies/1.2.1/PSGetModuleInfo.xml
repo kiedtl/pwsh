@@ -1,0 +1,147 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Pansies</S>
+      <Version N="Version">1.2.1</Version>
+      <S N="Type">Module</S>
+      <S N="Description">A PowerShell module for handling color and cursor positioning via ANSI escape sequences</S>
+      <S N="Author">Joel Bennett</S>
+      <S N="CompanyName">Jaykul</S>
+      <S N="Copyright">(c) 2017 Joel Bennett. All rights reserved.</S>
+      <DT N="PublishedDate">2017-10-10T05:36:54-04:00</DT>
+      <Obj N="InstalledDate" RefId="1">
+        <DT>2019-02-13T11:44:37.1052211-05:00</DT>
+        <MS>
+          <Obj N="DisplayHint" RefId="2">
+            <TN RefId="1">
+              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
+              <T>System.Enum</T>
+              <T>System.ValueType</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>DateTime</ToString>
+            <I32>2</I32>
+          </Obj>
+        </MS>
+      </Obj>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/PoshCode/Pansies/blob/master/LICENSE</URI>
+      <URI N="ProjectUri">https://github.com/PoshCode/Pansies</URI>
+      <URI N="IconUri">https://github.com/PoshCode/Pansies/blob/resources/Pansies_32.gif?raw=true</URI>
+      <Obj N="Tags" RefId="3">
+        <TN RefId="2">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>ANSI</S>
+          <S>EscapeSequences</S>
+          <S>VirtualTerminal</S>
+          <S>Color</S>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="4">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Get-Gradient</S>
+                <S>Get-Complement</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="7">
+              <TNRef RefId="2" />
+              <LST>
+                <S>New-Text</S>
+                <S>Write-Host</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="8">
+              <TNRef RefId="2" />
+              <LST>
+                <S>New-Text</S>
+                <S>Write-Host</S>
+                <S>Get-Gradient</S>
+                <S>Get-Complement</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="6" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">1.2.1: Fix cmdlet export so New-Text and Write-Host show back up_x000D__x000A_               Make EXTERNALHELP work for functions_x000D__x000A_               Provide help for Get-Complement_x000D__x000A_        1.2.0: Better support for using ConsoleColors_x000D__x000A_               Added Get-Complement to calculate the HSL complement or contrasting colors_x000D__x000A_               Fixed ConsolePalette so it reads the current console colors when possible_x000D__x000A_        1.1.0: Support for serialization by the Configuration module_x000D__x000A_               Fix output of "bright" color object in ConEmu (workaround ConEmu bug)_x000D__x000A_        1.0.0: Pre-release version with support for RGB colors</S>
+      <Obj N="Dependencies" RefId="9">
+        <TNRef RefId="2" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="10">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) 2017 Joel Bennett. All rights reserved.</S>
+          <S N="description">A PowerShell module for handling color and cursor positioning via ANSI escape sequences</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">1.2.1: Fix cmdlet export so New-Text and Write-Host show back up_x000D__x000A_               Make EXTERNALHELP work for functions_x000D__x000A_               Provide help for Get-Complement_x000D__x000A_        1.2.0: Better support for using ConsoleColors_x000D__x000A_               Added Get-Complement to calculate the HSL complement or contrasting colors_x000D__x000A_               Fixed ConsolePalette so it reads the current console colors when possible_x000D__x000A_        1.1.0: Support for serialization by the Configuration module_x000D__x000A_               Fix output of "bright" color object in ConEmu (workaround ConEmu bug)_x000D__x000A_        1.0.0: Pre-release version with support for RGB colors</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">False</S>
+          <S N="versionDownloadCount">6013</S>
+          <S N="downloadCount">7476</S>
+          <S N="packageSize">2412775</S>
+          <S N="published">10/10/2017 5:36:54 AM -04:00</S>
+          <S N="created">10/10/2017 5:36:54 AM -04:00</S>
+          <S N="lastUpdated">2/13/2019 2:48:04 PM -05:00</S>
+          <S N="tags">ANSI EscapeSequences VirtualTerminal Color PSModule PSCmdlet_New-Text PSCommand_New-Text PSCmdlet_Write-Host PSCommand_Write-Host PSIncludes_Cmdlet PSFunction_Get-Gradient PSCommand_Get-Gradient PSFunction_Get-Complement PSCommand_Get-Complement PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2019-02-13T14:48:04Z</S>
+          <S N="NormalizedVersion">1.2.1</S>
+          <S N="Authors">Joel Bennett</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Pansies.nuspec|Pansies.format.ps1xml|Pansies.psd1|Pansies.psm1|en-US\Pansies-help.xml|lib\net451\ColorMine.dll|lib\net451\ColorMine.pdb|lib\net451\Pansies.dll|lib\net451\Pansies.pdb|lib\net451\System.Management.Automation.dll|lib\netstandard1.6\ColorMine.deps.json|lib\netstandard1.6\ColorMine.dll|lib\netstandard1.6\ColorMine.pdb|lib\netstandard1.6\Pansies.deps.json|lib\netstandard1.6\Pansies.dll|lib\netstandard1.6\Pansies.pdb</S>
+          <S N="GUID">6c376de1-1baf-4d52-9666-d46f6933bc16</S>
+          <S N="CompanyName">HuddledMasses.org</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\elija\Documents\PowerShell\Modules\Pansies\1.2.1</S>
+    </MS>
+  </Obj>
+</Objs>
